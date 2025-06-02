@@ -192,8 +192,12 @@ sealed class CodeAssetTarget extends AssetBuildTarget {
   final Architecture architecture;
   final OS os;
 
+  /// The C compiler configuration for this target. This is populated by
+  /// [precacheCCompilerConfig].
   late final CCompilerConfig? cCompilerConfigSync;
 
+  /// Precaching the C compiler config in [cCompilerConfigSync], to be able to
+  /// load it synchronously later.
   Future<void> precacheCCompilerConfig();
 
   List<CodeAssetExtension> get codeAssetExtensions {
