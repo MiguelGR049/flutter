@@ -565,6 +565,7 @@ class TestFeatureFlags implements FeatureFlags {
     flutterCustomDevicesFeature,
     cliAnimation,
     nativeAssets,
+    dartDataAssets,
     swiftPackageManager,
   ];
 }
